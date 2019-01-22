@@ -60,7 +60,7 @@ stage('Upload Files To Artifactory') {
 <tr><td style="background-color:#33339F;color:white"><b>Build URL</b></td><td>$BUILD_URL</td></tr>
 </table>
 ''', subject: 'Jenkins ${BUILD_STATUS} [#${BUILD_NUMBER}] - ${PROJECT_NAME} ${ENV, var="GIT_URL"}', to: 'srikanth.bathini@eaiesb.com'    
-          slackSend (color: "#32CD32", message: 'salesforce-munit Deployment is Sucessful')
+           slackSend (color: "#32CD32", message: 'salesforce-munit Deployment is Sucessful')
         }
   }
 }
