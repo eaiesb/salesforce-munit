@@ -13,7 +13,7 @@ stage("Build Mule Source Code") {
 steps {
           slackSend (color: "#f1502f", message: "Git URL is : ${env.GIT_URL}")
           slackSend (color: "add8e6", message: 'salesforce-newcustomer Deployment Started')
-           buildsrc() 
+          buildsrc() 
       }
 }
 
