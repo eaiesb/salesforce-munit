@@ -39,7 +39,7 @@ stage('Upload Files To Artifactory') {
    post {
       failure {
                 slackSend (color: "0000ff", message: 'salesforce-newcustomer Build failed')
-            emailext attachLog: true, body: '''The Failed build details are as follows:<br> <br>
+                emailext attachLog: true, body: '''The Failed build details are as follows:<br> <br>
 <table border="1">
 <tr><td style="background-color:white;color:red"><b>Job Name</b></td><td>$JOB_NAME</td></tr>
 <tr><td style="background-color:white;color:red"><b>Build Number</b></td><td>$BUILD_NUMBER</td></tr>
