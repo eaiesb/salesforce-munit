@@ -14,6 +14,6 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
             </munit:inbound-properties>
         </munit:set>
         <flow-ref name="newcustomerFlow" doc:name="Flow-ref to newcustomerFlow"/>
-        <munit:assert-not-null doc:name="Assert Not Null Payload"/>
+        <munit:assert-null doc:name="Assert Null Payload"/>
     </munit:test>
 </mule>
