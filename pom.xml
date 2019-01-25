@@ -30,7 +30,7 @@
 								  	<username>${anypoint.username}</username> 
 								  	<password>${anypoint.password}</password> 
 								  	<applicationName>salesforce-newcustomer-munit-mule3</applicationName>
-								  	<environment>${cloundhub.env}</environment> 
+								  	<environment>Sandbox</environment> 
 								  	<uri>https://anypoint.mulesoft.com</uri>
 							          	<workerType>Micro</workerType>
 								  </configuration>
