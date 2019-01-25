@@ -12,7 +12,7 @@ environment {
       steps {
         sh 'echo ${ANYPOINT_CREDENTIALS_USR} ${ANYPOINT_CREDENTIALS_PSW}'
   
-        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Dmule.version=3.9.1 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
+        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Dmule.version=3.9.1 -Danypoint.username=${Sudheekar_Devops} -Danypoint.password=${Eaiesb152}'
         
          
       }
