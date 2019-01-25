@@ -32,7 +32,7 @@
 		            </goals>
 		            <configuration>
 		              <files>
-		                <file>src/main/resources${myenv}.properties</file>
+		                <file>src/main/resources/${myenv}.properties</file>
 		              </files>
 		            </configuration>
 		          </execution>
