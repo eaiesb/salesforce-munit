@@ -39,9 +39,7 @@ stage('Deploy CloudHub') {
       environment {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
-      steps {
-         
-      }
+      
     } 	
 }
    post {
