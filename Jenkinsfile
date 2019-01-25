@@ -63,10 +63,13 @@ stage('Upload Files To Artifactory') {
           slackSend (color: "#32CD32", message: 'salesforce-newcustomer Deployment is Sucessful')
         }
   }
-}
-stage('Deploy CloudHub') { 
+  stage('Deploy CloudHub') { 
       environment {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+        }
+        }
+}
+
 // steps
 def buildsrc() {
 dir ('.' ) {
