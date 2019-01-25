@@ -35,12 +35,7 @@ stage('Upload Files To Artifactory') {
             }
     }
 } 
-stage('Deploy CloudHub') { 
-      environment {
-        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
-      }
-      
-    } 	
+
 }
    post {
       failure {
@@ -71,7 +66,12 @@ stage('Deploy CloudHub') {
   }
   
 }
-
+stage('Deploy CloudHub') { 
+      environment {
+        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+      }
+      
+    } 	
 // steps
 def buildsrc() {
 dir ('.' ) {
