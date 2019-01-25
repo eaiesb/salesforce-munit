@@ -1,4 +1,7 @@
 pipeline {
+environment {
+        JAVA_HOME = tool('java')
+    }
   agent any
   stages {
     
