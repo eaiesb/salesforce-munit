@@ -10,9 +10,9 @@ environment {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
       steps {
-        sh 'echo ${anypoint.username} ${anypoint.password}'
+        sh 'echo ${ANYPOINT_CREDENTIALS_PSW} ${ANYPOINT_CREDENTIALS_PSW}'
   
-        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Dmule.version=3.9.1 -Danypoint.username=${Sudheekar_Devops} -Danypoint.password=${Eaiesb152}'
+        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Dmule.version=3.9.1 -Danypoint.username=Sudheekar_Devops -Danypoint.password=Eaiesb152'
         
          
       }
