@@ -67,6 +67,6 @@ stage('Upload Files To Artifactory') {
 // steps
 def buildsrc() {
 dir ('.' ) {
-     sh '/usr/maven/apache-maven-3.3.9/bin/mvn deploy -P cloudhub -Danypoint.username=${anypoint.username} -Danypoint.password=${anypoint.password}'
+     sh '/usr/maven/apache-maven-3.3.9/bin/mvn deploy -P cloudhub'
 }
 }
