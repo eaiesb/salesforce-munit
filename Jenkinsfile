@@ -34,7 +34,15 @@ stage('Upload Files To Artifactory') {
 
             }
     }
-}  	
+} 
+stage('Deploy CloudHub') { 
+      environment {
+        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+      }
+      steps {
+         
+      }
+    } 	
 }
    post {
       failure {
@@ -63,16 +71,12 @@ stage('Upload Files To Artifactory') {
           slackSend (color: "#32CD32", message: 'salesforce-newcustomer Deployment is Sucessful')
         }
   }
-  stage('Deploy CloudHub') { 
-      environment {
-        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
-        }
-        }
+  
 }
 
 // steps
 def buildsrc() {
 dir ('.' ) {
-     sh 'mvn deploy -P cloudhub -Dmule.version=3.9.0 -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
+     sh 'mvn deploy -P cloudhub  -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
 }
 }
