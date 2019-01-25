@@ -12,7 +12,7 @@ environment {
       steps {
         sh 'echo ${ANYPOINT_CREDENTIALS_PSW} ${ANYPOINT_CREDENTIALS_PSW}'
   
-        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Denv=${dev}.properties'
+        sh '/usr/maven/apache-maven-3.3.9/bin/mvn clean package mule:deploy -Denv=${dev}'
         
          
       }
