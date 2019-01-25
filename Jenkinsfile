@@ -75,6 +75,6 @@ stage('Deploy CloudHub') {
 // steps
 def buildsrc() {
 dir ('.' ) {
-     sh 'sh '/usr/maven/apache-maven-3.3.9/bin/mvn deploy -P cloudhub  -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
+     sh '/usr/maven/apache-maven-3.3.9/bin/mvn deploy -P cloudhub  -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}' 
 }
 }
