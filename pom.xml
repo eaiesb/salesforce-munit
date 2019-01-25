@@ -26,7 +26,7 @@
 							          <version>2.2.1</version>
 							          <configuration>
 							       	<deploymentType>cloudhub</deploymentType>
-								  	<muleVersion>3.9.1</muleVersion> 
+								  	<muleVersion>${mule.version}</muleVersion> 
 								  	<username>${anypoint.username}</username> 
 								  	<password>${anypoint.password}</password> 
 								  	<applicationName>salesforce-newcustomer-munit-mule3</applicationName>
